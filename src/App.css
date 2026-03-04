@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.navbar {
+  @apply min-h-0;
+}
+
+.menu-horizontal {
+  @apply px-1 md:px-2 py-1 md:py-2;
+}
+
+.menu-horizontal li {
+  @apply md:ml-2 ml-0 first:ml-0;
+}
+
+.menu-horizontal li a {
+  @apply md:px-4 px-2 md:py-2 py-2;
+}
+
+.page-title {
+  @apply font-header text-lg md:text-3xl mb-6
+}
+
+a.link, a:hover.link , a:active.link , a:visited.link {
+  @apply text-blue-500 hover:underline no-underline;
+}
+
+footer a.link, footer a:hover.link, footer a:active.link, footer a:visited.link {
+  @apply text-neutral-content underline hover:no-underline;
+}
+
+.password-scheme .password-examples li {
+  @apply mb-2;
+}
+
+.password-scheme .card-body {
+  @apply flex flex-col items-start justify-start;
+}
+
+.password-scheme p {
+  @apply mb-2;
+}
+
+.content p {
+  @apply mt-2 mb-4 last:mb-0;
+}
+
+.card-body {
+  @apply md:p-8 p-4;
+}
+
+.markdown-content a, .markdown-content a:visited, .markdown-content a:active, .markdown-content a:hover {
+  @apply link text-blue-500 hover:underline no-underline;
+}
+
+.markdown-content table {
+  @apply table table-sm w-full mb-6 mt-6 border rounded-md min-w-full border-collapse overflow-x-auto block;
+}
+.markdown-content table td {
+  @apply text-base;
+}
+
+.markdown-content table th {
+  @apply bg-gray-100 text-base-content;
+}
+
+.markdown-content table th {
+  @apply uppercase;
+}
+
+.markdown-content ol {
+  @apply list-decimal ml-6;
+}
+
+.markdown-content ul {
+  @apply list-disc ml-6;
+}
+
+.markdown-content p {
+ @apply last:m-0;
+}
+
+/* Username animations */
+.username-text-enter {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.username-text-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms ease-in, transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.username-text-exit {
+  opacity: 1;
+  position: absolute;
+  transform: translateX(0);
+}
+
+.username-text-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}

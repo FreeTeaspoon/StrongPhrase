@@ -1,0 +1,36 @@
+
+.faq-overall-container {
+  @apply p-2 md:p-6 bg-slate-300 rounded-xl shadow-lg;
+  @apply mx-auto mt-24;
+}
+
+.section-header {
+  @apply text-4xl font-bold mb-8 text-center text-gray-900;
+}
+
+.faq-container {
+  @apply mb-6;
+}
+
+.faq-item {
+  @apply bg-white shadow-sm  py-3 px-4 md:py-6 md:px-8 mb-3 md:mb-6 rounded-xl border border-gray-200;
+}
+
+.faq-question {
+  @apply text-2xl font-semibold mb-2;
+}
+
+.faq-answer {
+  @apply text-gray-700;
+}
+
+
+.footnotes {
+  @apply text-sm;
+}
+.footnotes h2 {
+  @apply font-normal italic;
+}
+.footnotes p {
+  display: inline;
+}

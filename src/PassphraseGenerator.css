@@ -1,0 +1,103 @@
+.passphrase-header {
+  @apply flex items-center mb-12
+}
+
+.passphrase-header .dropdown-container {
+  @apply ml-8
+}
+
+.passphrase-block {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, height 0.5s ease-out, padding 0.5s ease-out, margin-bottom 0.5s ease-out;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-20px); /* Move up slightly as they fade out */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.label-container {
+  /* width: 180px; */
+  @apply flex items-center;
+}
+
+.crack-time-info {
+  @apply flex justify-start w-2/3;
+}
+
+.crack-stats-container {
+  /* width: 270px; */
+}
+
+@media (max-width: 640px) { /* Tailwind's default breakpoint for 'sm' */
+  .crack-time-info {
+    @apply flex-col items-start;
+  }
+
+  .crack-stats-container {
+    @apply w-full mt-2 ml-2 flex-shrink-0; /* Adjust margin-top as needed for visual spacing */
+  }
+}
+
+.passphrase-content {
+  @apply pt-2 pb-2 px-4  bg-gray-100 rounded-xl font-mono text-xl pr-10 lg:pr-28 border border-gray-300;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, border-color 0.5s ease-out;
+}
+
+/* highlight when hovering or copied */
+.passphrase-content:hover,
+.copied .passphrase-content {
+  @apply !bg-green-100 !text-green-800 cursor-pointer;
+  border-color: rgb(145, 198, 166) !important;
+}
+
+/* Refresh animation for MorePassphrases page */
+.refresh-animation .passphrase-content {
+  @apply !bg-blue-100 !text-blue-800;
+  border-color: rgb(147, 197, 253) !important;
+}
+
+.crack-time {
+  @apply py-1 px-3 mb-1 rounded-full flex-grow  inline-block border-2 text-xs
+}
+
+.crack-time em {
+  @apply font-bold
+}
+
+.copy-button {
+  @apply px-2 py-0 rounded-none rounded-tr-xl rounded-bl-lg absolute right-0 text-sm uppercase font-sans;
+  @apply bg-gray-300 tracking-wide top-0 cursor-pointer btn btn-xs border-0;
+  transition: background-color 0.5s ease-out;
+}
+
+.passphrase-content:hover .copy-button,
+.copied .copy-button,
+.recommended-passcode.copied .copy-button {
+  @apply !bg-green-300
+}
+
+/* Refresh animation for copy button */
+.refresh-animation .copy-button {
+  @apply !bg-blue-300;
+}
+
+/* Refresh animation for progress bar */
+.refresh-animation .bg-primary {
+  @apply !bg-blue-500;
+}
+
+.recommended-passcode .passphrase-content {
+  @apply bg-purple-100 text-purple-800 border-purple-300
+}
+
+.recommended-passcode .label-container span {
+  @apply text-purple-800
+}
+
+.recommended-passcode .copy-button {
+  @apply bg-purple-300
+}
